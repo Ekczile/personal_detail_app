@@ -1,4 +1,5 @@
 require 'sinatra'
+require_relative 'math.rb'
 
 get '/' do
     erb :name 
@@ -133,9 +134,10 @@ get '/info' do
     firstname = params[:first_n]
     age = params[:yage]
     color = params[:fcolor]
-    luckyone = params[:lucky1]
-    luckytwo = params[:lucky2]
-    luckythree = params[:lucky3]
+    luckyone = params[:lucky1].to_i
+    luckytwo = params[:lucky2].to_i
+    luckythree = params[:lucky3].to_i
     pet = params[:fpet]
-    erb :info, locals: {lastname: lastname, firstname: firstname, age: age, color: color, luckyone: luckyone, luckytwo: luckytwo, luckythree: luckythree, pet: pet}
+    add_total = addition(luckyone, luckytwo, luckythree)
+    erb :info, locals: {lastname: lastname, firstname: firstname, age: age, color: color, luckyone: luckyone, luckytwo: luckytwo, luckythree: luckythree, pet: pet, add_total: add_total}
 end
