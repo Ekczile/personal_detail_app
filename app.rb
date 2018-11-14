@@ -139,5 +139,6 @@ get '/info' do
     luckythree = params[:lucky3].to_i
     pet = params[:fpet]
     add_total = addition(luckyone, luckytwo, luckythree)
-    erb :info, locals: {lastname: lastname, firstname: firstname, age: age, color: color, luckyone: luckyone, luckytwo: luckytwo, luckythree: luckythree, pet: pet, add_total: add_total}
+    multi_total = multiplication(luckyone, luckytwo, luckythree)
+    erb :info, locals: {lastname: lastname, firstname: firstname, age: age, color: color, luckyone: luckyone, luckytwo: luckytwo, luckythree: luckythree, pet: pet, add_total: add_total, multi_total: multi_total}
 end
