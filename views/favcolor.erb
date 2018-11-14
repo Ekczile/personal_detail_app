@@ -1,0 +1,8 @@
+<%= firstname%> <%= lastname%> what is your favorite color? <%=age%>
+<form method = 'post' action = '/favcolor'>
+  Favorite color: <input type="text" name="fcolor"><br>
+  <input type = "hidden" name = "first_n" value = <%= firstname%>>
+  <input type = "hidden" name = "lname" value = <%= lastname%>>
+  <input type = "hidden" name = "yage" value = <%= age%>>
+  <input type="submit" value="Submit">
+</form>

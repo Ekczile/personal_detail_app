@@ -1,0 +1,12 @@
+ <%= firstname %> <%= lastname %>, your favorite kind of pet? <%= luckythree%>
+<form method = 'post' action = '/favpet'>
+    Favorate kind of pet: <input type="text" name="fpet"><br>
+    <input type = "hidden" name = "first_n" value = <%= firstname%>>
+    <input type = "hidden" name = "lname" value = <%= lastname%>>
+    <input type = "hidden" name = "yage" value = <%= age%>>
+    <input type = "hidden" name = "fcolor" value = <%= color%>>
+    <input type = "hidden" name = "lucky1" value = <%= luckyone%>>
+    <input type = "hidden" name = "lucky2" value = <%= luckytwo%>>
+    <input type = "hidden" name = "lucky3" value = <%= luckythree%>>
+    <input type="submit" value="Submit">
+</form>
