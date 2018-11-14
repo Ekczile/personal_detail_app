@@ -141,5 +141,6 @@ get '/info' do
     add_total = addition(luckyone, luckytwo, luckythree)
     multi_total = multiplication(luckyone, luckytwo, luckythree)
     sub_total = subtraction(luckyone, luckytwo, luckythree)
-    erb :info, locals: {lastname: lastname, firstname: firstname, age: age, color: color, luckyone: luckyone, luckytwo: luckytwo, luckythree: luckythree, pet: pet, add_total: add_total, multi_total: multi_total, sub_total: sub_total}
+    div_total = division(luckyone, luckytwo, luckythree)
+    erb :info, locals: {lastname: lastname, firstname: firstname, age: age, color: color, luckyone: luckyone, luckytwo: luckytwo, luckythree: luckythree, pet: pet, add_total: add_total, multi_total: multi_total, sub_total: sub_total, div_total: div_total}
 end
